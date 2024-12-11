@@ -71,6 +71,6 @@ total:  4   10.23 sec   DES: 10   NT: 15   MD5: 5   SHA256: 20   SHA512: 10   YE
 1. Input files: `passwords100.txt` (hashed passwords) and `plain100.txt` (plaintext dictionary).
 2. Run the program with 4 threads:
    ```bash
-   ./thread_hash -i passwords100.txt -d plain100.txt -t 4 -o results.txt -v
+   ./thread_hash -i passwords100.txt -d plain100.txt -t 4 -o results.txt
    ```
 3. View the results in `results.txt` and performance metrics in the terminal.
