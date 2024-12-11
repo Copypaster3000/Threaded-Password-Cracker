@@ -1,12 +1,12 @@
 # Threaded Password Cracker
 
 ## Project Overview
-This project is a multi-threaded password-cracking application written in C as part of the CS 333 course, Lab 5. The primary focus of the project is to demonstrate performance improvements using multiple threads while working with hashed passwords and implementing cryptographic algorithms.
+This project is a multi-threaded password-cracking application written in C. The primary focus of the project is to demonstrate performance improvements using multiple threads while working with hashed passwords.
 
 ## Features
 - Uses `PThreads` for multi-threading.
 - Supports various hashing algorithms, including DES, NT, MD5, SHA-256, SHA-512, bcrypt, and yescrypt.
-- Capable of processing up to 24 threads for password cracking.
+- Capable of processing up to 24 threads for password cracking. (Self imposed limit of 24 threads)
 - Provides verbose mode for detailed diagnostics.
 - Outputs cracked passwords or failures along with performance metrics.
 
@@ -45,7 +45,7 @@ The program accepts the following command-line arguments:
 ## Compilation and Execution
 1. Compile the program using the provided `Makefile`:
    ```bash
-   make all
+   make
    ```
 
 2. Run the program with appropriate options. Example:
@@ -66,16 +66,6 @@ cracked  <plaintext_password>  <hashed_password>
 ```
 total:  4   10.23 sec   DES: 10   NT: 15   MD5: 5   SHA256: 20   SHA512: 10   YESCRYPT: 8   total: 100  failed: 5
 ```
-
-## Requirements
-- Use the `babbage` server for execution.
-- Compile with the following `gcc` flags to ensure code quality:
-  ```bash
-  -Wall -Wextra -Wshadow -Wunreachable-code -Wredundant-decls -Wmissing-declarations \
-  -Wold-style-definition -Wmissing-prototypes -Wdeclaration-after-statement -Wno-return-local-addr \
-  -Wunsafe-loop-optimizations -Wuninitialized -Werror -Wno-unused-parameter
-  ```
-- Pass `valgrind` checks with no memory leaks or unsafe accesses.
 
 ## Example Use Case
 1. Input files: `passwords100.txt` (hashed passwords) and `plain100.txt` (plaintext dictionary).
