@@ -1,7 +1,5 @@
 //thread_hash.c
 //Drake Wheeler
-//CS 333
-//Lab5
 
 #include <stdio.h>
 #include <stdlib.h>
